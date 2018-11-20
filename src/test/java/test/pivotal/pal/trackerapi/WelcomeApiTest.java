@@ -1,3 +1,4 @@
+
 package test.pivotal.pal.trackerapi;
 
 import io.pivotal.pal.tracker.PalTrackerApplication;
@@ -18,9 +19,11 @@ public class WelcomeApiTest {
     @Autowired
     private TestRestTemplate restTemplate;
 
-    @Test
+  @Test
     public void exampleTest() {
         String body = this.restTemplate.getForObject("/", String.class);
+        System.out.println(body);
         assertThat(body).isEqualTo("Hello from test");
     }
+
 }
